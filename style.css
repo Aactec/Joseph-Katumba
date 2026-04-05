@@ -7,10 +7,10 @@ body {
 }
 header {
    display: flex; justify-content: space-between; align-items: center;
-   padding: 20px 100px; background: #020617;
+   padding: 20px 80px; background: #020617;
 }
 
-header h1 { color: #ad8432; }
+header h1 { color: #ad8432; font-size: clamp(1rem, calc(3vw + 1rem), 3rem); }
 
 nav a {
   color: white; margin-left: 20px; text-decoration: none;
@@ -24,7 +24,7 @@ nav a {
   background-size: cover;
 }
 
-.hero h2 { font-size: 4rem; margin-bottom: 20px; }
+.hero h2 { font-size: clamp(2.8rem, calc(7vw + 1rem), 4.2rem); margin-bottom: 20px; }
 .hero p { margin-bottom: 30px; }
 
 .btn {
@@ -34,7 +34,8 @@ nav a {
 }
 
 .section {
-  padding: 60px 20px; text-align: center;
+  padding-block: 60px; 
+  text-align: center;
 }
 
 span {
@@ -44,7 +45,7 @@ span {
 .about{
     display: flex;
     gap: 4rem;
-    padding-block: 6rem;
+    padding-block: 4rem;
     width: 80%;
     margin: auto;
 }
@@ -63,7 +64,7 @@ span {
 }
 
 .about h2{
-    font-size: 4rem;
+    font-size: clamp(2.8rem, calc(6vw + 1rem), 4rem);
 }
 
 .about-text p{
@@ -73,6 +74,18 @@ span {
 .two, .three {
   width: 80%;
   margin: auto;
+}
+
+.two .card{
+  background: #ebcd90; padding: 28px; border-radius: 10px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.two .card p{
+  font-weight: 900;
 }
 
 .package{
@@ -122,3 +135,22 @@ footer {
 }
 
 /* mobile view */
+@media screen and (max-width: 768px){
+    header{
+        padding: 20px 20px;
+    }
+    #nav{
+        display: none;
+    }
+    .hero{
+        padding: 100px 20px;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .package{
+        width: 80%;
+        margin: auto;
+    }
+  
+}
