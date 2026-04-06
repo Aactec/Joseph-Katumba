@@ -10,7 +10,7 @@ header {
    padding: 20px 80px; background: #020617;
 }
 
-header h1 { color: #ad8432; font-size: clamp(1rem, calc(3vw + 1rem), 3rem); }
+header h1 { color: #ad8432; font-size: clamp(1rem, calc(3vw + 1rem), 2rem); }
 
 nav a {
   color: white; margin-left: 20px; text-decoration: none;
